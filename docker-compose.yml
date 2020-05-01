@@ -1,0 +1,19 @@
+object_detection:
+  image: object_detection_image
+  container_name: object_detection
+  restart: always
+  environment:
+     - TERM=xterm
+  hostname: '127.0.0.1'
+  ports:
+     - "80:80"       
+     - "443:443"           
+  volumes:
+      #Volume mounting for image entry
+    - /home/manmohan/DockerProject/CV/js_face_recognition.html:/usr/share/nginx/html/index.html
+    - /home/manmohan/DockerProject/CV/opencv.js:/usr/share/nginx/html/opencv.js
+    - /home/manmohan/DockerProject/CV/utils.js:/usr/share/nginx/html/utils.js
+
+
+
+  
